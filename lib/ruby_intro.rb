@@ -9,16 +9,21 @@ end
 
 def max_2_sum arr
   # YOUR CODE HERE
-  arr2 = []
-  max1 = arr.max
-  arr2 = arr.sort
-  arr2.pop
-  puts arr2.pop + arr.max
-  
+  if arr.length == 0 then return 0
+  elsif arr.length == 1 then return arr[0] 
+  else
+    arr2 = []
+    arr2 = arr.sort!
+    a = arr2.pop
+    b = arr.max
+    sum = a + b
+    return sum
+  end
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+
 end
 
 # Part 2
