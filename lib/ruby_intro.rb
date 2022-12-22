@@ -62,17 +62,6 @@ def starts_with_consonant? s
     end
     return true
   end
-  
-  # if s.length == 0
-  #   return false
-  # else
-  #   n = s[0].downcase.count 'aeiou#'
-  #   if n > 0 
-  #     return false
-  #   else
-  #     return true
-  #   end
-  # end
 end
 
 def binary_multiple_of_4? s
