@@ -77,10 +77,42 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  s = s.delete(" ")
+  n = s.length
+  if n == 0
+    return false
+  else
+    x = s.delete('01')
+    if x.length != 0
+      return false
+    else
+      if s.to_i(2) % 4 == 0
+        return true
+      else
+        return false
+      end 
+    end
+  end
 end
 
 # Part 3
 
 class BookInStock
 # YOUR CODE HERE
+attr_reader :isbn,:price
+attr_writer :isbn,:price
+
+def initialize(isbn, price)
+  @isbn = isbn
+  @price = price
+
+  if isbn.length == 0 || price <= 0
+    return raise ArgumentError
+  end
+end
+
+def price_as_string
+  n = '%.2f' % @price
+  return "$#{n}"
+end
 end
