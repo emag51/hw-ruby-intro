@@ -23,7 +23,20 @@ end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
-
+  if arr.length == 0 || n == 0 then return false
+  elsif arr.length == 1 || n == 1 then return false
+  else
+    for i in arr do
+      for j in arr do
+        if i != j
+          if i + j == n
+            return true
+          end
+        end
+      end
+    end
+    return false
+  end
 end
 
 # Part 2
