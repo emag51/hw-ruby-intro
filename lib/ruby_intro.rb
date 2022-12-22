@@ -9,6 +9,12 @@ end
 
 def max_2_sum arr
   # YOUR CODE HERE
+  arr2 = []
+  max1 = arr.max
+  arr2 = arr.sort
+  arr2.pop
+  puts arr2.pop + arr.max
+  
 end
 
 def sum_to_n? arr, n
