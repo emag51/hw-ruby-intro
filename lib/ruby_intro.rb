@@ -43,10 +43,36 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  greeting = "Hello, "+name
+  return greeting
 end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  vowels = ['a','e','i','o','u','#','U']
+  
+  if s.length == 0 
+    return false
+  else
+    s.downcase
+    for i in vowels do
+      if i == s[0] 
+        return false
+      end
+    end
+    return true
+  end
+  
+  # if s.length == 0
+  #   return false
+  # else
+  #   n = s[0].downcase.count 'aeiou#'
+  #   if n > 0 
+  #     return false
+  #   else
+  #     return true
+  #   end
+  # end
 end
 
 def binary_multiple_of_4? s
