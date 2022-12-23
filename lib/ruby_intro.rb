@@ -88,8 +88,7 @@ end
 
 class BookInStock
 # YOUR CODE HERE
-attr_reader :isbn,:price
-attr_writer :isbn,:price
+attr_accessor :isbn,:price
 
 def initialize(isbn, price)
   @isbn = isbn
